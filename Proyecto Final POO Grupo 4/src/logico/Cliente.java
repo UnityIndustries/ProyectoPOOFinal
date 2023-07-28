@@ -1,9 +1,15 @@
 package logico;
 
 public class Cliente {
+<<<<<<< HEAD
 	private String nombre;
 	private String direccion;
 	private String telefono;
+=======
+	
+
+	
+>>>>>>> branch 'main' of https://github.com/UnityIndustries/ProyectoPOOFinal.git
 
 	public Cliente(String nombre, String direccion, String telefono) {
 		this.nombre = nombre;
