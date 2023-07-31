@@ -1,30 +1,29 @@
 package logico;
 
-public class MemoriaRAM extends Componente1 {
-    private int cantidadMemoria;
-    private String tipoMemoria;
+public class MemoriaRAM extends Componente {
 
-    public MemoriaRAM(String numeroSerie, String marca, double precio, int cantidadDisponible,
-                      int cantidadMemoria, String tipoMemoria) {
-        super(numeroSerie, marca, precio, cantidadDisponible);
-        this.cantidadMemoria = cantidadMemoria;
-        this.tipoMemoria = tipoMemoria;
-    }
+	private int cantidadMemoria; 
+	private String tipoMemoria;
 
-    
-    public int getCantidadMemoria() {
-        return cantidadMemoria;
-    }
+	public MemoriaRAM(String marca, double precio, int cantidadDisponible, String NumeroSerie, int cantidadMemoria, String tipoMemoria) {
+		super(marca, precio, cantidadDisponible, NumeroSerie);
+		this.cantidadMemoria = cantidadMemoria;
+		this.tipoMemoria = tipoMemoria;
+	}
 
-    public void setCantidadMemoria(int cantidadMemoria) {
-        this.cantidadMemoria = cantidadMemoria;
-    }
+	public int getCantidadMemoria() {
+		return cantidadMemoria;
+	}
 
-    public String getTipoMemoria() {
-        return tipoMemoria;
-    }
+	public void setCantidadMemoria(int cantidadMemoria) {
+		this.cantidadMemoria = cantidadMemoria;
+	}
 
-    public void setTipoMemoria(String tipoMemoria) {
-        this.tipoMemoria = tipoMemoria;
-    }
+	public String getTipoMemoria() {
+		return tipoMemoria;
+	}
+
+	public void setTipoMemoria(String tipoMemoria) {
+		this.tipoMemoria = tipoMemoria;
+	}
 }
