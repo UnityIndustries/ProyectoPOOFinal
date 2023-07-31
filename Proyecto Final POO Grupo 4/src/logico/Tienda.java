@@ -3,42 +3,78 @@ package logico;
 import java.util.ArrayList;
 
 public class Tienda {
-    private ArrayList<Cliente> clientes;
-    private ArrayList<Factura> facturas;
-    private ArrayList<Componente1> inventario;
+	private ArrayList<Componente> listaComponentes; 
+	private ArrayList<Cliente> listaClientes; 
+	private ArrayList<Factura> listaFacturas; 
+	private ArrayList<Combo> listaCombos; 
 
-    public Tienda() {
-        clientes = new ArrayList<>();
-        facturas = new ArrayList<>();
-        inventario = new ArrayList<>();
-    }
+	public Tienda() {
+		this.listaComponentes = new ArrayList<Componente>();
+		this.listaClientes = new ArrayList<Cliente>();
+		this.listaFacturas = new ArrayList<Factura>();
+		this.listaCombos = new ArrayList<Combo>();
+	}
 
-    public void agregarCliente(Cliente cliente) {
-        clientes.add(cliente);
-    }
+	public ArrayList<Componente> getListaComponentes() {
+		return listaComponentes;
+	}
 
-    public Factura crearFactura(int numeroFactura, Cliente cliente) {
-        Factura factura = new Factura(numeroFactura, cliente);
-        facturas.add(factura);
-        return factura;
-    }
+	public void setListaComponentes(ArrayList<Componente> listaComponentes) {
+		this.listaComponentes = listaComponentes;
+	}
 
-    public void agregarComponenteAlInventario(Componente1 componente) {
-        inventario.add(componente);
-    }
+	public ArrayList<Cliente> getListaClientes() {
+		return listaClientes;
+	}
 
-    public void eliminarComponenteDelInventario(Componente1 componente) {
-        inventario.remove(componente);
-    }
+	public void setListaClientes(ArrayList<Cliente> listaClientes) {
+		this.listaClientes = listaClientes;
+	}
 
-    public Componente1 buscarComponentePorNumeroSerie(String numeroSerie) {
-        for (Componente1 componente : inventario) {
-            if (componente.getNumeroSerie().equals(numeroSerie)) {
-                return componente;
-            }
-        }
-        return null;
-    }
+	public ArrayList<Factura> getListaFacturas() {
+		return listaFacturas;
+	}
 
+	public void setListaFacturas(ArrayList<Factura> listaFacturas) {
+		this.listaFacturas = listaFacturas;
+	}
+
+	public ArrayList<Combo> getListaCombos() {
+		return listaCombos;
+	}
+
+	public void setListaCombos(ArrayList<Combo> listaCombos) {
+		this.listaCombos = listaCombos;
+	}
+
+
+
+	public void agregarComponente(Componente componente) {
+		this.listaComponentes.add(componente);
+	}
+
+	public void eliminarComponente(Componente componente) {
+		this.listaComponentes.remove(componente);
+	}
+
+	public void agregarCliente(Cliente cliente) {
+		this.listaClientes.add(cliente);
+	}
+
+	public void eliminarCliente(Cliente cliente) {
+		this.listaClientes.remove(cliente);
+	}
+
+	public void agregarCombo(Combo combo) {
+		this.listaCombos.add(combo);
+	}
+
+	public void eliminarCombo(Combo combo) {
+		this.listaCombos.remove(combo);
+	}
+
+	public void agregarFactura(Factura factura) {
+		this.listaFacturas.add(factura);
+	}
 }
 
