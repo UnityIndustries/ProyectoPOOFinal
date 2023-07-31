@@ -1,40 +1,39 @@
 package logico;
 
-public class DiscoDuro extends Componente1 {
-    private String modelo;
-    private int capacidadAlmacenamiento;
-    private String tipoConexion;
+public class DiscoDuro extends Componente {
 
-    public DiscoDuro(String numeroSerie, String marca, double precio, int cantidadDisponible,
-                     String modelo, int capacidadAlmacenamiento, String tipoConexion) {
-        super(numeroSerie, marca, precio, cantidadDisponible);
-        this.modelo = modelo;
-        this.capacidadAlmacenamiento = capacidadAlmacenamiento;
-        this.tipoConexion = tipoConexion;
-    }
+	private String modelo; 
+	private int capacidadAlmacenamiento; 
+	private String tipoConexion; 
 
-    
-    public String getModelo() {
-        return modelo;
-    }
+	public DiscoDuro(String marca, double precio, int cantidadDisponible, String NumeroSerie, String modelo, int capacidadAlmacenamiento, String tipoConexion) {
+		super(marca, precio, cantidadDisponible, NumeroSerie);
+		this.modelo = modelo;
+		this.capacidadAlmacenamiento = capacidadAlmacenamiento;
+		this.tipoConexion = tipoConexion;
+	}
 
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
-    }
+	public String getModelo() {
+		return modelo;
+	}
 
-    public int getCapacidadAlmacenamiento() {
-        return capacidadAlmacenamiento;
-    }
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
 
-    public void setCapacidadAlmacenamiento(int capacidadAlmacenamiento) {
-        this.capacidadAlmacenamiento = capacidadAlmacenamiento;
-    }
+	public int getCapacidadAlmacenamiento() {
+		return capacidadAlmacenamiento;
+	}
 
-    public String getTipoConexion() {
-        return tipoConexion;
-    }
+	public void setCapacidadAlmacenamiento(int capacidadAlmacenamiento) {
+		this.capacidadAlmacenamiento = capacidadAlmacenamiento;
+	}
 
-    public void setTipoConexion(String tipoConexion) {
-        this.tipoConexion = tipoConexion;
-    }
+	public String getTipoConexion() {
+		return tipoConexion;
+	}
+
+	public void setTipoConexion(String tipoConexion) {
+		this.tipoConexion = tipoConexion;
+	}
 }
