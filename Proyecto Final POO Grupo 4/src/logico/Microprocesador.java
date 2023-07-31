@@ -1,48 +1,39 @@
 package logico;
 
-public class Microprocesador {
-    private String marca;
-    private String modelo;
-    private String tipoConexion;
-    private double velocidadProcesamiento;
+public class Microprocesador extends Componente {
 
-    public Microprocesador(String marca, String modelo, String tipoConexion, double velocidadProcesamiento) {
-        this.marca = marca;
-        this.modelo = modelo;
-        this.tipoConexion = tipoConexion;
-        this.velocidadProcesamiento = velocidadProcesamiento;
-    }
+	private String modelo; 
+	private String tipoConexionSocket; 
+	private double velocidadProcesamiento;
 
-    
-    public String getMarca() {
-        return marca;
-    }
+	public Microprocesador(String marca, double precio, int cantidadDisponible, String NumeroSerie, String modelo, String tipoConexionSocket, double velocidadProcesamiento) {
+		super(marca, precio, cantidadDisponible, NumeroSerie);
+		this.modelo = modelo;
+		this.tipoConexionSocket = tipoConexionSocket;
+		this.velocidadProcesamiento = velocidadProcesamiento;
+	}
 
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
+	public String getModelo() {
+		return modelo;
+	}
 
-    public String getModelo() {
-        return modelo;
-    }
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
 
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
-    }
+	public String getTipoConexionSocket() {
+		return tipoConexionSocket;
+	}
 
-    public String getTipoConexion() {
-        return tipoConexion;
-    }
+	public void setTipoConexionSocket(String tipoConexionSocket) {
+		this.tipoConexionSocket = tipoConexionSocket;
+	}
 
-    public void setTipoConexion(String tipoConexion) {
-        this.tipoConexion = tipoConexion;
-    }
+	public double getVelocidadProcesamiento() {
+		return velocidadProcesamiento;
+	}
 
-    public double getVelocidadProcesamiento() {
-        return velocidadProcesamiento;
-    }
-
-    public void setVelocidadProcesamiento(double velocidadProcesamiento) {
-        this.velocidadProcesamiento = velocidadProcesamiento;
-    }
+	public void setVelocidadProcesamiento(double velocidadProcesamiento) {
+		this.velocidadProcesamiento = velocidadProcesamiento;
+	}
 }
