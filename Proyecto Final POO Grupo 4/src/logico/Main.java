@@ -34,7 +34,7 @@ public class Main {
 
 		cliente1.comprarComponente(motherboard);
 
-		Factura factura1 = new Factura(1, "01/01/2022", "john Cabral");
+		Factura factura1 = new Factura(1, "01/07/2023", "john Cabral");
 
 		factura1.agregarComponente(motherboard);
 		factura1.agregarCombo(comboGamer);
