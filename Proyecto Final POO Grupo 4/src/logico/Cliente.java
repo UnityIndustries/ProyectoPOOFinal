@@ -60,7 +60,7 @@ public class Cliente {
 
 	public void comprarCombo(Combo combo) {
 		int numeroFactura = 1; 
-		String fechaEmision = "01/01/2022"; 
+		String fechaEmision = "01/07/2023"; 
 		String nombreCliente = this.nombre; 
 
 		Factura factura = new Factura(numeroFactura, fechaEmision, nombreCliente); 
@@ -71,7 +71,7 @@ public class Cliente {
 	
 	public void comprarComponente(Componente componente) {
 		int numeroFactura = 2;
-		String fechaEmision = "01/01/2022"; 
+		String fechaEmision = "01/07/2023"; 
 		String nombreCliente = this.nombre;
 
 		Factura factura = new Factura(numeroFactura, fechaEmision, nombreCliente); 
